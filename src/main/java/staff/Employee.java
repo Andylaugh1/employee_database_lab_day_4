@@ -22,5 +22,13 @@ public abstract class Employee {
     public int salary(){
         return this.salary;
     }
+
+    public void raiseSalary(double raise){
+       double newSalary = this.salary * raise;
+    }
+
+    public double returnOnePercentSalary(){
+        return this.salary * 0.01;
+    }
 }
 
