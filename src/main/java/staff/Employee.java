@@ -3,9 +3,9 @@ package staff;
 public abstract class Employee {
     private String name;
     private String nNumber;
-    private int salary;
+    private double salary;
 
-    public Employee ( String name, String nNumber, int salary) {
+    public Employee ( String name, String nNumber, double salary) {
         this.name = name;
         this.nNumber = nNumber;
         this.salary = salary;
@@ -19,16 +19,17 @@ public abstract class Employee {
         return this.nNumber;
     }
 
-    public int salary(){
+    public double salary(){
         return this.salary;
     }
 
     public void raiseSalary(double raise){
-       double newSalary = this.salary * raise;
+       this.salary += raise;
     }
 
-    public double returnOnePercentSalary(){
-        return this.salary * 0.01;
+    public double payBonus(){
+       double bonus =  this.salary * 0.01;
+       return bonus;
     }
 }
 
